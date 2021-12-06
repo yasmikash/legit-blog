@@ -1,5 +1,5 @@
-import { graphql, Link } from "gatsby"
 import React from "react"
+import { graphql, Link } from "gatsby"
 import Seo from "../components/Seo"
 import { GrLinkNext, GrLinkPrevious } from "react-icons/gr"
 
