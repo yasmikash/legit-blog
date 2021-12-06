@@ -1,18 +1,21 @@
-import * as React from "react"
+import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
 import Seo from "../components/Seo"
 
 const NotFoundPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={location} title={siteTitle}>
-      <Seo title="404: Not Found" />
-      <h1>404: Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </Layout>
+    <div className="flex h-screen w-screen justify-center items-center">
+      <Seo title="Not Found" />
+      <div>
+        <h1 className="font-bold text-xl">This page does not exist.</h1>
+        <h2 className="font-semibold">
+          Please contact me @ hello@yasmikash.com
+        </h2>
+      </div>
+    </div>
   )
 }
 

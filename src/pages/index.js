@@ -10,8 +10,6 @@ const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  console.log(posts)
-
   return (
     <main className="flex flex-col px-2 xl:px-0 xl:w-5/6 m-auto my-2">
       <Seo title="Home" />
