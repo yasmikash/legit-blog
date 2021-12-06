@@ -1,17 +1,16 @@
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import React from "react"
 import Seo from "../components/Seo"
+import { GrLinkNext, GrLinkPrevious } from "react-icons/gr"
 
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
-  console.log(post)
-
   return (
     <div className="bg-gray-50">
-      <div className="flex flex-col w-4/6 m-auto my-2">
+      <div className="flex flex-col px-2 md:w-5/6 md:p-0 lg:w-4/6 lg:p-0 m-auto">
         <Seo
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -22,10 +21,30 @@ const BlogPost = ({ data, location }) => {
             <p className="text-gray-700 italic">{post.frontmatter.date}</p>
           </header>
           <section
-            className="overflow-x-auto"
+            className="post-body"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>
+        <div className="flex my-2 font-semibold">
+          {previous && (
+            <div className="flex items-center bg-white p-4 space-x-4">
+              <GrLinkPrevious />
+              <p>
+                <Link to={previous.fields.slug}>
+                  {previous.frontmatter.title}
+                </Link>
+              </p>
+            </div>
+          )}
+          {next && (
+            <div className="flex items-center bg-white p-4 space-x-4 ml-auto">
+              <p>
+                <Link to={next.fields.slug}>{next.frontmatter.title}</Link>
+              </p>
+              <GrLinkNext />
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

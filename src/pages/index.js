@@ -13,20 +13,11 @@ const Home = ({ data, location }) => {
   console.log(posts)
 
   return (
-    <main className="flex flex-col w-5/6 m-auto my-2">
+    <main className="flex flex-col px-2 xl:px-0 xl:w-5/6 m-auto my-2">
       <Seo title="Home" />
-      {/* <Helmet>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-          rel="stylesheet"
-        ></link>
-      </Helmet> */}
-      {/** Header */}
       <Header />
-      <Technologies />
       <Posts posts={posts} />
+      <Technologies />
       <Testimonial />
     </main>
   )

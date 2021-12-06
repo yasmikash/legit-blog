@@ -13,16 +13,14 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-remark-classes`,
-      options: {
-        classMap: {
-          "heading[depth=1]": "title",
-          "heading[depth=2]": "subtitle",
-          paragraph: "para",
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-remark-classes`,
+    //   options: {
+    //     classMap: {
+    //       paragraph: "text-gray-50",
+    //     },
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

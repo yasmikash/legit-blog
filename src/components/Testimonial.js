@@ -4,7 +4,7 @@ import Container from "./Container"
 const Testimonial = () => {
   return (
     <Container headerTitle="What people say on Fiverr?">
-      <div className="grid grid-cols-3 p-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 p-4 gap-2">
         <div className="bg-white p-3 rounded-md">
           <p>
             "Great to work with, once again! He even improved our already

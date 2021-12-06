@@ -17,7 +17,7 @@ const Technologies = () => {
   return (
     <Container headerTitle="Technologies Familiarized">
       <div className="flex justify-center">
-        <div className="flex">
+        <div className="flex justify-center flex-wrap flex-row">
           {TECHNOLOGIES.map(technology => (
             <Technology
               Icon={technology.Icon}
