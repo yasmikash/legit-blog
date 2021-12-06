@@ -1,18 +1,28 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Yasmika Saubhagya`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Yasmika Saubhagya`,
+      summary: `Full Stack Developer`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `I'm a full-stack software engineer who is enthusiastic about working with different technologies in development. Learning new technologies in-depth fascinates me, applying what learned in real-world projects pleases me.`,
+    siteUrl: `https://yasmikash.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `yasmikash`,
     },
   },
   plugins: [
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-remark-classes`,
+      options: {
+        classMap: {
+          "heading[depth=1]": "title",
+          "heading[depth=2]": "subtitle",
+          paragraph: "para",
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -52,6 +62,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-postcss`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
@@ -106,7 +117,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
+            title: "Yasmika Saubhagya Blog RSS Feed",
           },
         ],
       },
@@ -114,15 +125,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Yasmika Saubhagya Blog`,
+        short_name: `yasmikash`,
         start_url: `/`,
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.ico`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,

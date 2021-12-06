@@ -1,70 +1,37 @@
-import * as React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
+import React from "react"
+import Seo from "../components/Seo"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const BlogPostTemplate = ({ data, location }) => {
+const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
+  console.log(post)
+
   return (
-    <Layout location={location} title={siteTitle}>
-      <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
-      <article
-        className="blog-post"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <header>
-          <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
-        </header>
-        <section
-          dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
+    <div className="bg-gray-50">
+      <div className="flex flex-col w-4/6 m-auto my-2">
+        <Seo
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
         />
-        <hr />
-        <footer>
-          <Bio />
-        </footer>
-      </article>
-      <nav className="blog-post-nav">
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
-    </Layout>
+        <article className="mt-4 bg-white p-8 rounded-md">
+          <header className="mb-4">
+            <h1 className="text-3xl font-bold">{post.frontmatter.title}</h1>
+            <p className="text-gray-700 italic">{post.frontmatter.date}</p>
+          </header>
+          <section
+            className="overflow-x-auto"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </article>
+      </div>
+    </div>
   )
 }
 
-export default BlogPostTemplate
+export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostBySlug(
