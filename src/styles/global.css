@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @media (max-width: 640px) {
+    .post-body {
+      @apply text-sm;
+    }
+  }
+}
+
 @layer utilities {
   .post-body p {
     @apply my-4;
