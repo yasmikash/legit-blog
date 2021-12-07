@@ -11,6 +11,10 @@
 }
 
 @layer utilities {
+  .post-body {
+    @apply text-justify;
+  }
+
   .post-body p {
     @apply my-4;
   }
