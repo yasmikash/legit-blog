@@ -5,7 +5,7 @@ import Post from "./Post"
 const Posts = ({ posts }) => {
   return (
     <Container headerTitle="Latest Posts">
-      <div className="grid grid-cols-1 md:grid-cols-2 p-4 gap-2 md:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 p-2 md:p-4 gap-2 md:gap-4">
         {posts.map(post => (
           <Post
             title={post.frontmatter.title}
