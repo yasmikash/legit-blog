@@ -68,7 +68,7 @@ const BADGES = [
 const Header = () => {
   return (
     <div className="flex flex-col md:flex-row w-[100%] space-y-2 md:space-y-0 md:space-x-2">
-      <div className="flex bg-gray-700 text-white p-4 px-5 text-sm space-x-4 md:w-4/5 rounded-md">
+      <div className="flex justify-evenly bg-gray-700 text-white p-4 px-5 text-sm space-x-4 md:w-4/5 rounded-md">
         <div className="flex items-center">
           <StaticImage
             className="rounded-full"

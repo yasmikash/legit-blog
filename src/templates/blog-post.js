@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Seo from "../components/Seo"
-import { GrLinkNext, GrLinkPrevious } from "react-icons/gr"
 
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
@@ -15,7 +14,10 @@ const BlogPost = ({ data, location }) => {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article className="mt-4 bg-white p-8 rounded-md">
+        <h1 className="mt-4 m-auto font-bold text-2xl text-gray-900">
+          <Link to="/">Yasmika Saubhagya.</Link>
+        </h1>
+        <article className="mt-4 bg-white p-8 rounded-md divide-y divide-gray-200">
           <header className="mb-4">
             <h1 className="text-3xl font-bold">{post.frontmatter.title}</h1>
             <p className="text-gray-700 italic">{post.frontmatter.date}</p>
@@ -25,10 +27,10 @@ const BlogPost = ({ data, location }) => {
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>
-        <div className="flex my-2 font-semibold">
+        <div className="flex my-2 font-semibold text-gray-800 text-sm">
           {previous && (
-            <div className="flex items-center bg-white p-4 space-x-4">
-              <GrLinkPrevious />
+            <div className="flex items-center bg-white p-2 space-x-4">
+              <p>&lt;</p>
               <p>
                 <Link to={previous.fields.slug}>
                   {previous.frontmatter.title}
@@ -37,11 +39,11 @@ const BlogPost = ({ data, location }) => {
             </div>
           )}
           {next && (
-            <div className="flex items-center bg-white p-4 space-x-4 ml-auto">
+            <div className="flex items-center bg-white p-2 space-x-4 ml-auto">
               <p>
                 <Link to={next.fields.slug}>{next.frontmatter.title}</Link>
               </p>
-              <GrLinkNext />
+              <p>&gt;</p>
             </div>
           )}
         </div>
