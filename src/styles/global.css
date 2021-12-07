@@ -5,7 +5,7 @@
 @layer base {
   @media (max-width: 640px) {
     .post-body {
-      @apply text-sm;
+      @apply text-2sm;
     }
   }
 }
