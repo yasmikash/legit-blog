@@ -84,7 +84,7 @@ const Header = () => {
         <div className="flex flex-col space-y-2">
           {BADGES.map(({ Icon, Label, id }) => {
             return (
-              <div className="flex items-center space-x-2" key={id}>
+              <div className="flex text-sm items-center space-x-2" key={id}>
                 <>
                   {Icon}
                   {Label}
@@ -94,9 +94,11 @@ const Header = () => {
           })}
         </div>
       </div>
-      <div className="flex flex-col bg-gray-800 text-white p-4 px-7 rounded-md justify-center">
-        <h1 className="font-semibold text-3xl mb-2">Yasmika Saubhagya</h1>
-        <h2 className="text-justify text-base ml-0 xl:w-4/6">
+      <div className="flex flex-col bg-gray-800 text-white p-2 px-5 md:p-4 md:px-7 rounded-md justify-center">
+        <h1 className="font-semibold text-2xl sm:text-3xl mb-2">
+          Yasmika Saubhagya
+        </h1>
+        <h2 className="text-justify text-sm sm:text-2sm ml-0 xl:w-4/6">
           I'm a full-stack software engineer who is enthusiastic about working
           with different technologies in development. Learning new technologies
           in-depth fascinates me, applying what learned in real-world projects

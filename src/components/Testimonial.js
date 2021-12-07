@@ -4,7 +4,7 @@ import Container from "./Container"
 const Testimonial = () => {
   return (
     <Container headerTitle="What people say on Fiverr?">
-      <div className="grid grid-cols-1 md:grid-cols-3 p-4 gap-2">
+      <div className="grid text-1sm grid-cols-1 md:grid-cols-3 p-4 gap-2 text-justify">
         <div className="bg-white p-3 rounded-md">
           <p>
             "Great to work with, once again! He even improved our already
@@ -12,9 +12,7 @@ const Testimonial = () => {
             requested for the gig. He is always responsive and basically part of
             the team. We would recommend to anyone."
           </p>
-          <div className="font-semibold text-gray-700 italic mt-2">
-            cavortmedia555, USA
-          </div>
+          <div className="text-gray-700 italic mt-2">cavortmedia555, USA</div>
         </div>
         <div className="bg-white p-3 rounded-md">
           <p>
@@ -27,9 +25,7 @@ const Testimonial = () => {
             – especially those struggling to find a seller with great
             communication and dedication to his work and his customers."
           </p>
-          <div className="font-semibold text-gray-700 italic mt-2">
-            ecamediapub, USA
-          </div>
+          <div className="text-gray-700 italic mt-2">ecamediapub, USA</div>
         </div>
         <div className="bg-white p-3 rounded-md">
           <p>
@@ -38,9 +34,7 @@ const Testimonial = () => {
             result based on requirements with expectation! Really recommended
             and will work with him again in the future!"
           </p>
-          <div className="font-semibold text-gray-700 italic mt-2">
-            tommyc241, Malaysia
-          </div>
+          <div className="text-gray-700 italic mt-2">tommyc241, Malaysia</div>
         </div>
       </div>
     </Container>

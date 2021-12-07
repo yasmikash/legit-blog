@@ -20,8 +20,12 @@ const BlogPost = ({ data, location }) => {
         </h1>
         <article className="mt-4 bg-white p-4 md:p-8 rounded-md divide-y divide-gray-200">
           <header className="mb-4">
-            <h1 className="text-2xl font-bold">{post.frontmatter.title}</h1>
-            <p className="text-gray-700 italic">{post.frontmatter.date}</p>
+            <h1 className="text-lg sm:text-2xl font-bold">
+              {post.frontmatter.title}
+            </h1>
+            <p className="text-sm sm:text-base text-gray-700 italic">
+              {post.frontmatter.date}
+            </p>
           </header>
           <section
             className="post-body"
