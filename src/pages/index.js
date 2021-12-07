@@ -5,6 +5,7 @@ import Posts from "../components/Posts"
 import Technologies from "../components/Technologies"
 import Seo from "../components/Seo"
 import Testimonial from "../components/Testimonial"
+import Footer from "../components/Footer"
 
 const Home = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
@@ -17,6 +18,7 @@ const Home = ({ data, location }) => {
       <Posts posts={posts} />
       <Technologies />
       <Testimonial />
+      <Footer />
     </main>
   )
 }

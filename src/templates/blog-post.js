@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Seo from "../components/Seo"
+import Footer from "../components/Footer"
 
 const BlogPost = ({ data, location }) => {
   const post = data.markdownRemark
@@ -17,9 +18,9 @@ const BlogPost = ({ data, location }) => {
         <h1 className="mt-4 m-auto font-bold text-2xl text-gray-900">
           <Link to="/">Yasmika Saubhagya.</Link>
         </h1>
-        <article className="mt-4 bg-white p-8 rounded-md divide-y divide-gray-200">
+        <article className="mt-4 bg-white p-4 md:p-8 rounded-md divide-y divide-gray-200">
           <header className="mb-4">
-            <h1 className="text-3xl font-bold">{post.frontmatter.title}</h1>
+            <h1 className="text-2xl font-bold">{post.frontmatter.title}</h1>
             <p className="text-gray-700 italic">{post.frontmatter.date}</p>
           </header>
           <section
@@ -39,7 +40,7 @@ const BlogPost = ({ data, location }) => {
             </div>
           )}
           {next && (
-            <div className="flex items-center bg-white p-2 space-x-4 ml-auto">
+            <div className="flex items-center bg-white p-2 px-3 rounded-md space-x-4 ml-auto">
               <p>
                 <Link to={next.fields.slug}>{next.frontmatter.title}</Link>
               </p>
@@ -47,6 +48,7 @@ const BlogPost = ({ data, location }) => {
             </div>
           )}
         </div>
+        <Footer />
       </div>
     </div>
   )
