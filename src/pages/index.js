@@ -13,7 +13,7 @@ const Home = ({ data, location }) => {
 
   return (
     <main className="flex flex-col px-2 xl:px-0 xl:w-5/6 m-auto my-2">
-      <Seo title="Home" />
+      <Seo title="Full Stack Developer" />
       <Header />
       <Posts posts={posts} />
       <Technologies />
