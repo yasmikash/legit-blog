@@ -3,8 +3,6 @@ title: Unexpected Behaviors of Hooks with JavaScript Closure
 date: 2021-12-07T13:23:03.968Z
 description: Unexpected Behaviors of Hooks with JavaScript Closure
 ---
-
-
 ![Thumbnail image](react-hooks-yasmikash.jpeg)
 
 With the release of React version 16, the hooks initially came into existence after making a few announcements prior, and it’s being loved by the React community for the sake of its simplicity and to avoid unnecessary complications introduced by classes, especially among developers that use JavaScript as their main programming language. However, using hooks in functional components can be tricky at some times, especially when it comes to dealing with some of the JavaScript fundamental concepts such as closures.
@@ -92,7 +90,7 @@ This behaves this way because each time the function executes it has access to t
 
 To prevent this behavior from happening, we can provide a pure function to the `setCount()` method which is then guaranteed to be called only after the count value has been updated (the component has been re-rendered with the new value!).
 
-*Code snippet with the pure function passed into `setCount() `function:*
+*Code snippet with the pure function passed into `setCount()` function:*
 
 ```javascript
 const App = () => {
