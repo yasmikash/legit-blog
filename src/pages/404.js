@@ -10,9 +10,9 @@ const NotFoundPage = ({ data, location }) => {
     <div className="flex h-screen w-screen justify-center items-center">
       <Seo title="Not Found" />
       <div>
-        <h1 className="font-bold text-xl">This page does not exist.</h1>
+        <h1 className="font-bold text-xl">That page does not exist.</h1>
         <h2 className="font-semibold">
-          Please contact me @ yasmikash@gmail.com
+          Need to contact? Here is my email: yasmikash@gmail.com
         </h2>
       </div>
     </div>
