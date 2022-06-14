@@ -12,7 +12,7 @@ const NotFoundPage = ({ data, location }) => {
       <div>
         <h1 className="font-bold text-xl">This page does not exist.</h1>
         <h2 className="font-semibold">
-          Please contact me @ hello@yasmikash.com
+          Please contact me @ yasmikash@gmail.com
         </h2>
       </div>
     </div>

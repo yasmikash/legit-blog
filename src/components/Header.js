@@ -11,18 +11,6 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const BADGES = [
   {
-    id: 1,
-    Icon: <BiBuildings />,
-    Label: (
-      <p>
-        Working @{" "}
-        <a href="https://www.itelasoft.com.au/" target="_blank">
-          iTelaSoft
-        </a>
-      </p>
-    ),
-  },
-  {
     id: 2,
     Icon: <SiFiverr />,
     Label: (
@@ -34,7 +22,7 @@ const BADGES = [
   {
     id: 3,
     Icon: <AiOutlineMail />,
-    Label: <a href="mailto:hello@yasmikash.com">hello@yasmikash.com</a>,
+    Label: <a href="mailto:yasmikash@gmail.com">yasmikash@gmail.com</a>,
   },
   {
     id: 4,

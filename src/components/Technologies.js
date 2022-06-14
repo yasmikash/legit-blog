@@ -9,7 +9,6 @@ const TECHNOLOGIES = [
   { id: 2, Icon: FaReact, label: "React.JS" },
   { id: 3, Icon: RiReactjsLine, label: "React Native" },
   { id: 4, Icon: FaJava, label: "Java" },
-  { id: 5, Icon: RiFlutterFill, label: "Flutter" },
   { id: 6, Icon: SiCsharp, label: "C#" },
 ]
 
